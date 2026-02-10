@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Blackdot</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<style>
+    /* Styling for the new work-details page */
+    .work-header {
+        width: 100%;
+        background-color: #f7f7f7; /* Light background instead of hero image */
+        padding-bottom: 20px;
+    }
+    .work-header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 10px 0;
+    }
+    .work-header .logo {
+        width: 140px; /* Adjusted size */
+        color: #ff004f; /* Accent color */
+    }
+    .work-header ul li a {
+        color: #333;
+    }
+    
+    .portfolio-grid {
+        padding: 50px 0;
+        margin: 0 50px;
+    }
+    .portfolio-grid .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 5%;
+    }
+    .portfolio-grid .sub-title {
+        text-align: center;
+        margin-bottom: 60px;
+        font-size: 50px;
+        font-weight: 600;
+        color: #333;
+    }
+    .portfolio-grid .work_list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+        grid-gap: 30px;
+        margin-top: 20px;
+    }
+    .portfolio-grid .work {
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .portfolio-grid .work img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        display: block;
+        transition: transform 0.5s;
+    }
+    .portfolio-grid .layer {
+        height: 100%; /* Cover entire card on hover */
+        background: linear-gradient(rgba(0,0,0,0.7), #ff004f);
+        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 20px;
+        text-align: center;
+        opacity: 0; /* Hidden by default */
+        transition: opacity 0.5s;
+    }
+    .portfolio-grid .work:hover .layer {
+        opacity: 1; /* Show on hover */
+    }
+    .portfolio-grid .work:hover img {
+        transform: scale(1.1);
+    }
+    .portfolio-grid .layer h3 {
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #fff;
+        font-size: 22px;
+    }
+    .portfolio-grid .layer p {
+        color: #eee;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+</style>
+</head>
+<body>
+    <div class="work-header">
+        <div class="container">
+            <nav>
+                <h1 class="logo">Blackdot</h1>
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </div>
+
+    <div class="portfolio-grid">
+        <div class="container">
+            <h1 class="sub-title">My Design Works</h1>
+            </div>
+            <div class="work_list">
+                <!-- Existing Images -->
+                <div class="work">
+                    <img src="./images/image_1.jpeg" alt="Brand Identity">
+                    <div class="layer">
+                        <h3>Brand Identity</h3>
+                        <p>Unique branding for corporate client.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/Image_2.jpeg" alt="Graphic Design">
+                    <div class="layer">
+                        <h3>Graphic Design</h3>
+                        <p>Marketing materials for seasonal campaign.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/Image_3.jpeg" alt="Social Media">
+                    <div class="layer">
+                        <h3>Social Media</h3>
+                        <p>Engaging posts for Instagram and Facebook.</p>
+                    </div>
+                </div>
+
+                <!-- New Portfolio Images -->
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.26.48 PM (1).jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>Print Design</h3>
+                        <p>Creative layout for print media.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.28.03 PM (1).jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>Brand Promotion</h3>
+                        <p>Visual identity and promotional assets.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.28.03 PM (2).jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>Marketing Material</h3>
+                        <p>High-impact marketing visuals.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.28.03 PM.jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>Social Media Post</h3>
+                        <p>Engaging content for digital platforms.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.28.04 PM (1).jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>Event Poster</h3>
+                        <p>Eye-catching poster for events.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.28.04 PM.jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>Product Showcase</h3>
+                        <p>Highlighting product features through design.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.28.05 PM (1).jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>Digital Banner</h3>
+                        <p>Web banner for online advertising.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.28.05 PM (2).jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>Creative Typography</h3>
+                        <p>Expressive typography design.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.28.05 PM.jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>Brand Asset</h3>
+                        <p>Core visual element for brand identity.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.28.06 PM (1).jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>Advertising Creative</h3>
+                        <p>Ad creative for omni-channel campaigns.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.28.06 PM (2).jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>Visual concept</h3>
+                        <p>Conceptual art for design projects.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.28.06 PM.jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>Campaign Visual</h3>
+                        <p>Key visual for marketing campaign.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.28.07 PM (1).jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>Layout Design</h3>
+                        <p>Clean and effective layout structure.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.28.07 PM (2).jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>Graphic Illustration</h3>
+                        <p>Custom illustration work.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.28.07 PM (3).jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>Photo Manipulation</h3>
+                        <p>Creative photo editing and manipulation.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.28.08 PM (1).jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>Corporate Identity</h3>
+                        <p>Professional identity design for business.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.28.08 PM.jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>Brochure Design</h3>
+                        <p>Informative and attractive brochure.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.28.13 PM.jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>Flyer Design</h3>
+                        <p>Promotional flyer for events.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.28.14 PM (1).jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>Social Media Story</h3>
+                        <p>Vertical format design for stories.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.28.14 PM (2).jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>Web Asset</h3>
+                        <p>Graphic element for website interface.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.28.15 PM.jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>Portfolio Showcase</h3>
+                        <p>Highlighting creative portfolio pieces.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 1.00.06 PM.jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>New Project 1</h3>
+                        <p>Recent design work.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 1.00.19 PM.jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>New Project 2</h3>
+                        <p>Recent design work.</p>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 1.01.21 PM.jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>New Project 4</h3>
+                        <p>Recent design work.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 1.06.03 PM.jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>New Project 5</h3>
+                        <p>Recent design work.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 1.06.04 PM (1).jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>New Project 6</h3>
+                        <p>Recent design work.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 1.06.04 PM (2).jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>New Project 7</h3>
+                        <p>Recent design work.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 1.06.04 PM.jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>New Project 8</h3>
+                        <p>Recent design work.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 1.06.05 PM (1).jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>New Project 9</h3>
+                        <p>Recent design work.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 1.06.05 PM (2).jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>New Project 10</h3>
+                        <p>Recent design work.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 1.06.05 PM.jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>New Project 11</h3>
+                        <p>Recent design work.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 1.06.06 PM (1).jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>New Project 12</h3>
+                        <p>Recent design work.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 1.06.06 PM (2).jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>New Project 13</h3>
+                        <p>Recent design work.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 1.06.06 PM.jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>New Project 14</h3>
+                        <p>Recent design work.</p>
+                    </div>
+                </div>
+                 <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 1.06.07 PM.jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>New Project 15</h3>
+                        <p>Recent design work.</p>
+                    </div>
+                </div>
+                 <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.55.41 PM.jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>New Project 16</h3>
+                        <p>Recent design work.</p>
+                    </div>
+                </div>
+                 <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.55.42 PM (1).jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>New Project 17</h3>
+                        <p>Recent design work.</p>
+                    </div>
+                </div>
+                 <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.55.42 PM.jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>New Project 18</h3>
+                        <p>Recent design work.</p>
+                    </div>
+                </div>
+
+                 <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.56.32 PM.jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>New Project 20</h3>
+                        <p>Recent design work.</p>
+                    </div>
+                </div>
+
+                 <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.57.35 PM.jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>New Project 22</h3>
+                        <p>Recent design work.</p>
+                    </div>
+                </div>
+                 <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 12.59.54 PM.jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>New Project 23</h3>
+                        <p>Recent design work.</p>
+                    </div>
+                </div>
+                 <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 2.41.28 PM.jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>New Project 24</h3>
+                        <p>Recent design work.</p>
+                    </div>
+                </div>
+                 <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 2.41.30 PM.jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>New Project 25</h3>
+                        <p>Recent design work.</p>
+                    </div>
+                </div>
+                 <div class="work">
+                    <img src="./portifolio_images/WhatsApp Image 2026-02-10 at 2.41.33 PM.jpeg" alt="Design Work">
+                    <div class="layer">
+                        <h3>New Project 26</h3>
+                        <p>Recent design work.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="index.html" class="btn">Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>copyright @ Blackdot with <i class="fa-solid fa-heart"></i></p>
+    </div>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
